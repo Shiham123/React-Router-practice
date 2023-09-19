@@ -3,10 +3,9 @@ import './css/app.scss';
 function App() {
   return (
     <>
-      <h1>this tailwind css checking</h1>
-      <h2 className="text-5xl font-bold text-white bg-black">
-        this tailwind css checking
-      </h2>
+      <h1 className="text-2xl font-extrabold m-auto text-center">
+        this is react router practice project
+      </h1>
     </>
   );
 }
