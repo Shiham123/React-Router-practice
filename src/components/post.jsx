@@ -1,5 +1,9 @@
 const Post = (props) => {
-  return <div></div>;
+  return (
+    <div>
+      <h1>this is post</h1>
+    </div>
+  );
 };
 
 export default Post;

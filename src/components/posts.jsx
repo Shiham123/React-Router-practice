@@ -1,21 +1,7 @@
-import { useEffect, useState } from 'react';
-import Post from './post';
-
 const Posts = () => {
-  const [data, setData] = useState([]);
-
-  useEffect(() => {
-    fetch('https://jsonplaceholder.typicode.com/posts')
-      .then((response) => response.json())
-      .then((data) => setData(data))
-      .catch((error) => console.log(error));
-  });
-
   return (
     <div>
-      {data.map((item, index) => {
-        return <Post key={index} data={data} />;
-      })}
+      <h1>this is posts</h1>
     </div>
   );
 };
