@@ -2,11 +2,31 @@ import { Link } from 'react-router-dom';
 
 const Navbar = () => {
   return (
-    <div>
-      <Link to="/">Home</Link>
-      <Link to="/contact">contact</Link>
-      <Link to="/posts">posts</Link>
-      <Link to="/post">post</Link>
+    <div className="mt-4">
+      <Link
+        to="/"
+        className="text-xl p-2 bg-blue-800 text-white rounded-lg m-2"
+      >
+        Home
+      </Link>
+      <Link
+        to="/contact"
+        className="text-xl p-2 bg-blue-800 text-white rounded-lg m-2"
+      >
+        contact
+      </Link>
+      <Link
+        to="/posts"
+        className="text-xl p-2 bg-blue-800 text-white rounded-lg m-2"
+      >
+        posts
+      </Link>
+      <Link
+        to="/post"
+        className="text-xl p-2 bg-blue-800 text-white rounded-lg m-2"
+      >
+        post
+      </Link>
     </div>
   );
 };

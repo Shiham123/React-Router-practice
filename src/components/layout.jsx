@@ -1,15 +1,6 @@
-import Footer from './footer';
-import Header from './header';
-
 const Layout = (props) => {
   const { children } = props;
-  return (
-    <div>
-      <Header />
-      {children}
-      <Footer />
-    </div>
-  );
+  return <div>{children}</div>;
 };
 
 export default Layout;
