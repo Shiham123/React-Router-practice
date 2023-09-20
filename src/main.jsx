@@ -4,9 +4,12 @@ import { createBrowserRouter, RouterProvider } from 'react-router-dom';
 import Home from './components/home.jsx';
 import Contact from './components/contact';
 import Posts from './components/posts';
+import PostDetails from './components/postDetails.jsx';
+import Users from './components/users.jsx';
+import UserDetails from './components/userDetails.jsx';
 
 import './css/main.css';
-import PostDetails from './components/postDetails.jsx';
+
 const router = createBrowserRouter([
   {
     path: '/',
@@ -20,13 +23,20 @@ const router = createBrowserRouter([
       },
       {
         path: '/post/:postId',
-        loader: ({ params }) => {
-          console.log(params);
-          return fetch(
-            `https://jsonplaceholder.typicode.com/posts/${params.postId}`
-          );
-        },
+        loader: ({ params }) =>
+          fetch(`https://jsonplaceholder.typicode.com/posts/${params.postId}`),
         element: <PostDetails />,
+      },
+      {
+        path: '/users',
+        loader: () => fetch(`https://jsonplaceholder.typicode.com/users`),
+        element: <Users />,
+      },
+      {
+        path: '/users/:userId',
+        loader: ({ params }) =>
+          fetch(`https://jsonplaceholder.typicode.com/posts/${params.userId}`),
+        element: <UserDetails />,
       },
     ],
   },

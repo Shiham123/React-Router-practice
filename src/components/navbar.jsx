@@ -21,6 +21,12 @@ const Navbar = () => {
       >
         posts
       </Link>
+      <Link
+        to="/users"
+        className="text-xl p-2 bg-blue-800 text-white rounded-lg m-2"
+      >
+        Users
+      </Link>
     </div>
   );
 };
